@@ -35,4 +35,12 @@ return reservationService.addReservation(reservation);
     public List<Reservation>getReservationParAnneeUniversitaire(@PathVariable  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date){
 return reservationService.getReservationParAnneeUniversitaire(date);
     }
+
+
+
+    @DeleteMapping("/annuler/{cin}")
+    public Reservation annulerReservation(@PathVariable Long cin)
+    {
+        return  reservationService.annulerReservation(cin);
+    }
 }

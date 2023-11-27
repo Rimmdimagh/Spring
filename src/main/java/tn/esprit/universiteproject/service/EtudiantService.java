@@ -3,15 +3,20 @@ package tn.esprit.universiteproject.service;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.universiteproject.entities.Etudiant;
+import tn.esprit.universiteproject.entities.Reservation;
 import tn.esprit.universiteproject.repository.EtudiantRepository;
+import tn.esprit.universiteproject.repository.ReservationRepository;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
 public class EtudiantService implements IEtudiantService{
 
     EtudiantRepository etudiantRepository;
+    ReservationRepository reservationRepository;
 
 
     @Override
@@ -49,4 +54,23 @@ etudiantRepository.deleteById(idEtudiant);
     public List<Etudiant> addEtudiants(List<Etudiant> etudiants) {
        return etudiantRepository.saveAll(etudiants);
     }
+/*
+    @Override
+    public Etudiant affecterEtudiantAReservation(String nomEt, String prenomEt, String idReservation) {
+Etudiant etudiant=etudiantRepository.findByNomEtAndPrenomEt(prenomEt,nomEt);
+        Reservation reservation=reservationRepository.findById(Long.valueOf(idReservation)).get();
+
+
+Set<Reservation> reservations=new ArrayList<>();
+if(etudiant.getReservations()!=null)
+{
+    reservations=etudiant.getReservations();
+
+}
+reservations.add(reservation);
+        etudiant.setReservations(reservations);
+        etudiantRepository.save(etudiant);
+
+        return etudiant;
+    }*/
 }

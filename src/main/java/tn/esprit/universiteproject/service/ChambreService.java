@@ -23,18 +23,19 @@ public class ChambreService implements  IChambreService{
         return chambreRepository.findAll();
     }
 
+
     @Override
     public List<Chambre> addChambres(List<Chambre> blocs) {
         return chambreRepository.saveAll(blocs);
     }
 
 
-/*
+
     @Override
     public List<Chambre> getChambresParNomBloc(String nomBloc) {
-        return chambreRepository.findByBloc_NomBloc(nomBloc);
+        return chambreRepository.findByBloc_nomBloc(nomBloc);
     }
-
+/*
     @Override
     public Long nbrChambreParTypeEtBloc(TypeChambre typeChambre, Long idBloc) {
         return chambreRepository.countByTypeCAndBlocs_Id(typeChambre,idBloc);

@@ -12,7 +12,7 @@ public interface IChambreService {
 
 
 
-   //public List<Chambre> getChambresParNomBloc ( String nomBloc );
+   public List<Chambre> getChambresParNomBloc ( String nomBloc );
 
   // public Long nbrChambreParTypeEtBloc(TypeChambre typeChambre, Long idBloc );
 }

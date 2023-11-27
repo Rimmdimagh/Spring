@@ -11,4 +11,8 @@ public interface IEtudiantService {
     Etudiant retrieveEtudiant(long idEtudiant);
     void removeEtudiant(long idEtudiant);
     List<Etudiant> addEtudiants (List<Etudiant> etudiants);
+
+
+    //Etudiant affecterEtudiantAReservation(String nomEt , String prenomEt , String idReservation );
+
 }
