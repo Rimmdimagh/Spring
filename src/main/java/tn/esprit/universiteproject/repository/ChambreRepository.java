@@ -30,4 +30,8 @@ public interface ChambreRepository extends JpaRepository<Chambre,Long> {
    List<Chambre>findByBloc_nomBloc(String nomBloc);
   Long countByTypeCAndBloc_IdBloc(TypeChambre typeC, Long idBloc);
 
+
+    List<Chambre> findByBloc_NomBloc(String nomBloc);
+    long countByTypeC(TypeChambre typeChambre);
+
 }

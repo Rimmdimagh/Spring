@@ -1,6 +1,7 @@
 package tn.esprit.universiteproject.service;
 
 import lombok.AllArgsConstructor;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.universiteproject.entities.Bloc;
 import tn.esprit.universiteproject.entities.Chambre;
