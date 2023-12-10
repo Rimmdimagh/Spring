@@ -15,4 +15,5 @@ public interface IChambreService {
    public List<Chambre> getChambresParNomBloc ( String nomBloc );
 
   // public Long nbrChambreParTypeEtBloc(TypeChambre typeChambre, Long idBloc );
+  public void listeChambresParBloc();
 }
